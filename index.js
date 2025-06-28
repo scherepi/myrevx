@@ -33,7 +33,7 @@ Reverend X Quotes:
 
 "If you don't mind, god don't mind slaying yo wicked ass at the end of time." */
 
-const imageFilenames = ["idle.png", "dance.png"]
+const imageFilenames = ["dancing.png", "egg.png", "standing.png"];
 
 const revXQuotes = [
     "Murder, a devil worshipper will do. That's John chapter 8 verse 42. The Devil does not abide by the truth, because there is no truth in him.", 
@@ -56,10 +56,28 @@ const revXQuotes = [
     "And fuck another motherfucker contrary to me, you're just a Ku Klux Klan member wannabe."
 ]
 
+const explanationText = "This is a brief attempt at bringing our lord and savior Reverend X to the glorious Internet. I made this as a shitty little experiment to toy around with CSS and JavaScript the day after I decided to change my life. Go watch Fredding The Needle's video to learn more about Rev X.";
+
 const rev = document.getElementById("rev");
 const gospel = document.getElementById("gospel");
 console.log("Starting script - Reverend X loves you, motherfucker.");
 
 function rotate() {
+    console.log("changing picture of our glorious savior");
+    let randomFile = "data/" + imageFilenames[Math.floor(Math.random() * imageFilenames.length)];
+    rev.style.backgroundImage = "url(" + randomFile + ")";
+    console.log("chosen image: " + randomFile);
+    let randomQuote = revXQuotes[Math.floor(Math.random() * revXQuotes.length)];
+    console.log("chosen quote: " + randomQuote);
+    gospel.childNodes[1].innerHTML = randomQuote;
+}
 
+setInterval(rotate, 3000);
+
+function explain() {
+    const explainDiv = document.createElement("div");
+    explainDiv.setAttribute("id", "explain");
+    explainDiv.appendChild(document.createElement("p"));
+    explainDiv.childNodes[1].innerHTML = explanationText;
+     
 }
