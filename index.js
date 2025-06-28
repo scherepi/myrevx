@@ -51,7 +51,9 @@ const revXQuotes = [
     "You don't know my words, your best bet is to learn. Now who the fuck is you supposed to be? Don't act like you don't know me, fool. What? You don't? Ain't no shame on me motherfucker, shame on you.",
     "I am the light. And you, motherfucker, you just blind.",
     "Well, you've got to be out yo goddamn mind.",
-    "If you don't mind, god don't mind slaying yo wicked ass at the end of time."
+    "If you don't mind, god don't mind slaying yo wicked ass at the end of time.",
+    "God will squash your ass like a bug in a rug.",
+    "And fuck another motherfucker contrary to me, you're just a Ku Klux Klan member wannabe."
 ]
 
 const rev = document.getElementById("rev");
@@ -59,5 +61,5 @@ const gospel = document.getElementById("gospel");
 console.log("Starting script - Reverend X loves you, motherfucker.");
 
 function rotate() {
-    
+
 }
