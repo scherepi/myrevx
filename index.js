@@ -68,6 +68,12 @@ function rotate() {
     rev.style.backgroundImage = "url(" + randomFile + ")";
     //console.log("chosen image: " + randomFile);
     let randomQuote = revXQuotes[Math.floor(Math.random() * revXQuotes.length)];
+    if (randomQuote == "I am God.") {
+        gospel.childNodes[1].style.color = "white";
+        setInterval(() => {
+            gospel.childNodes[1].style.color = "black";
+        }, 3000)
+    }
     //console.log("chosen quote: " + randomQuote);
     gospel.childNodes[1].innerHTML = randomQuote;
 }
